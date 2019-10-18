@@ -1,0 +1,45 @@
+.sidenav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+
+.sidenav{
+  background: #2F2F2F;
+}
+
+.mat-toolbar{
+  background:#2F2F2F;
+  color: #FFFFFF;
+}
+
+.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mat-list-item{
+  color: #FFFFFF;
+}
+
+span{
+  color: white;
+}
+
+mat-sidenav-content{
+  color: white;
+}
+
+.mat-divider{
+  background-color: white;
+}
+

@@ -1,0 +1,36 @@
+<mat-card [formGroup]="addService">
+    <mat-toolbar>Add Service</mat-toolbar>   
+    <mat-form-field>
+      <input id="serviceName" matInput placeholder="Service Name" formControlName="serviceName" class="form-control" type="text" required>
+      <mat-error *ngIf="(serviceName.dirty || serviceName.touched) && serviceName.invalid">Service Name required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <input id="serviceAddress" matInput placeholder="Service Address" formControlName="serviceAddress" class="form-control" type="text" required>
+        <mat-error *ngIf="(serviceAddress.dirty || serviceAddress.touched) && serviceAddress.invalid">Service Address required</mat-error>
+      </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Service Type">
+          <mat-option value="option">Option</mat-option>
+          <mat-option value="option">Option2</mat-option>
+          <mat-option value="option">Option3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Sampling Type">
+          <mat-option value="option">Option</mat-option>
+          <mat-option value="option">Option2</mat-option>
+          <mat-option value="option">Option3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="Match Type">
+          <mat-option value="option">Option</mat-option>
+          <mat-option value="option">Option2</mat-option>
+          <mat-option value="option">Option3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    <mat-card-actions align="end">
+      <button mat-raised-button type="button"  (click)="addService()">Create</button>
+    </mat-card-actions>
+  </mat-card>
+

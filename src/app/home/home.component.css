@@ -1,0 +1,20 @@
+table {
+    width: 40%;
+    height: 45%;
+    display: flex-column;
+    background-color: #333C40;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -300px;
+    z-index: 1;
+  }
+
+  .mat-cell {
+    color: white;
+}
+
+.mat-header-cell{
+    color: white;
+}

@@ -1,0 +1,39 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+                 [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+                 [mode]="(isHandset$ | async) ? 'push' : 'push'"
+                 [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Navigation</mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+        <a mat-list-item routerLink="/service-library">Service Library</a>
+        <a mat-list-item routerLink="/application-library">Application Library</a>
+    </mat-nav-list>
+    <mat-toolbar>Demo Project 001</mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/edit-application">Edit Application</a>
+      <a mat-list-item routerLink="/home">Home</a>
+    </mat-nav-list>
+    <mat-toolbar>General</mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/add-service">Add Service</a>
+      <a mat-list-item routerLink="/add-application">Add Application</a>
+      <a mat-list-item routerLink="/settings">Settings</a>
+      <a mat-list-item routerLink="/help">Help</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidebar">
+        <button class="hamburgerButton"
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+      <span>Alten Monitor System</span>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<router-outlet></router-outlet>

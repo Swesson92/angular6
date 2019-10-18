@@ -1,0 +1,40 @@
+mat-card {
+    width: 30%;
+    height: 50%;
+    display: flex-column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    background-color: #425F6D;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -300px;
+    z-index: 1;
+  }
+  
+  mat-form-field {
+    display: block;
+    color: black;
+   }
+ 
+   button{
+     color: white;
+     background-color: #1F2836;
+     text-align:center;
+   }
+  
+   mat-error {
+     color: #ff6666;
+   }
+ 
+   input[type=text] {
+     margin: -5px 0;
+   }
+ 
+   mat-toolbar {
+     background-color: #425F6D;
+     color: white;
+     padding-inline-start: 36%;
+   }

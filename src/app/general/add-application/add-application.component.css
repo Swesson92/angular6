@@ -1,0 +1,15 @@
+mat-card {
+    width: 450px;
+    height: 450px;
+    display: flex-column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    background-color: #425F6D;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -200px;
+    z-index: 1;
+  }

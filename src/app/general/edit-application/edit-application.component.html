@@ -1,0 +1,55 @@
+<mat-card [formGroup]="editApplication">
+    <mat-toolbar>Edit Application</mat-toolbar>   
+    <mat-form-field>
+      <input id="applicationName" matInput placeholder="Application Name" formControlName="applicationName" class="form-control" type="text" required>
+      <mat-error *ngIf="(applicationName.dirty || applicationName.touched) && applicationName.invalid">Application Name required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <input id="services" matInput placeholder="Services" formControlName="services" class="form-control" type="text" required>
+        <mat-error *ngIf="(services.dirty || services.touched) && services.invalid">Services required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <mat-select placeholder="Jenkins" [formControl]="jenkins" multiple>
+            <mat-select-trigger>
+              {{jenkins.value ? jenkins.value[0] : ''}}
+              <span *ngIf="jenkins.value?.length > 1" class="example-additional-selection">
+                (+{{jenkins.value.length - 1}} {{jenkins.value?.length === 2 ? 'other' : 'others'}})
+              </span>
+            </mat-select-trigger>
+            <mat-option *ngFor="let jenkins of jenkinsList" [value]="jenkins">{{jenkins}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="GoCD" [formControl]="goCd" multiple>
+              <mat-select-trigger>
+                {{goCd.value ? goCd.value[0] : ''}}
+                <span *ngIf="goCd.value?.length > 1" class="example-additional-selection">
+                  (+{{goCd.value.length - 1}} {{goCd.value?.length === 2 ? 'other' : 'others'}})
+                </span>
+              </mat-select-trigger>
+              <mat-option *ngFor="let goCd of goCdList" [value]="goCd">{{goCd}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+              <mat-select placeholder="Nodes" [formControl]="nodes" multiple>
+                <mat-select-trigger>
+                  {{nodes.value ? nodes.value[0] : ''}}
+                  <span *ngIf="nodes.value?.length > 1" class="example-additional-selection">
+                    (+{{nodes.value.length - 1}} {{nodes.value?.length === 2 ? 'other' : 'others'}})
+                  </span>
+                </mat-select-trigger>
+                <mat-option *ngFor="let nodes of nodesList" [value]="nodes">{{nodes}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-select placeholder="Server Dependencies" [formControl]="serverDependencies" multiple>
+                  <mat-select-trigger>
+                    {{serverDependencies.value ? serverDependencies.value[0] : ''}}
+                    <span *ngIf="serverDependencies.value?.length > 1" class="example-additional-selection">
+                      (+{{serverDependencies.value.length - 1}} {{serverDependencies.value?.length === 2 ? 'other' : 'others'}})
+                    </span>
+                  </mat-select-trigger>
+                  <mat-option *ngFor="let serverDependencies of serverDependenciesList" [value]="serverDependencies">{{serverDependencies}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+</mat-card>
